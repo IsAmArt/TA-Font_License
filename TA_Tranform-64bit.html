@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA Tranform BIT & HD </title>
+    
+    <!-- 1. เพิ่มโค้ดนำเข้าฟอนต์ Sarabun จาก Google Fonts ตรงนี้ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 2. แก้ไข font-family ตรง body ให้เป็น 'Sarabun' */
+        body { 
+            font-family: 'Sarabun', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #333; 
+            line-height: 1.6; 
+            background-color: #f4f4f4; 
+        }
+        
+        /* ... โค้ด CSS ส่วนอื่นๆ ด้านล่างปล่อยไว้เหมือนเดิม ... */
+        header { background-color: #111; color: #fff; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: center; gap: 30px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        nav a:hover { color: #ccc; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #555; text-decoration: none; font-weight: bold; }
+        .back-btn:hover { color: #000; text-decoration: underline; }
+
+        .font-header { text-align: center; margin-bottom: 40px; }
+        .font-header h1 { font-size: 2.5em; margin-bottom: 10px; }
+
+        /* สไตล์สำหรับปุ่ม Dropdown License */
+details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+summary {
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    transition: background-color 0.2s ease;
+}
+summary:hover {
+    background-color: #e2e2e2;
+}
+/* สร้างลูกศรชี้ลง และหมุนเมื่อกดขยาย */
+summary::after {
+    content: '▼';
+    font-size: 0.8em;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+.details-content {
+    padding: 20px;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+}
+        
+        /* รูปโปรโมทเรียงต่อกัน */
+        .promo-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ส่วน License เฉพาะฟอนต์ */
+        .license-box { background-color: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #ddd; margin-top: 40px; }
+        .license-box h3 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        ul { padding-left: 20px; }
+
+        footer { background-color: #111; color: #777; text-align: center; padding: 20px 0; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">กลับหน้าแรก (Home)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">← กลับไปหน้ารวมฟอนต์</a>
+        
+        <div class="font-header">
+            <h1>TA GBA Tranform MAX & Mini </h1>
+            <p>ฟอนต์ไทย สไตล์พิกเซล เกมเรโทร ย้อนยุค ที่ออกแบบให้ใช้พื้นที่ของพิกเซลอย่างคุ้มค่าที่สุด เป็นฟอนต์ กึ่งๆ Monospace ลดรูปตัวหนังสือบางส่วน เพื่อให้ใช้พื้นที่ได้อย่างคุ้มค่า</p>
+        </div>
+
+        <div class="promo-images">
+            <!-- ใส่รูปโปรโมทฟอนต์ของคุณตรงนี้ -->
+           <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRGuo-zhRTOT7XInY1BF2q5AZMfdMa7c2v9a3L-zMpModw?width=1920&height=1920" width="1920" height="1920" >
+        </div>
+
+        <div class="license-box">
+    <h3>📝 สัญญาอนุญาต (EULA / License)</h3>
+    <p>กรุณาอ่านและทำความเข้าใจเงื่อนไขก่อนดาวน์โหลดหรือใช้งาน / Please read the agreement before use.</p>
+
+    <!-- ปุ่ม Dropdown ภาษาไทย -->
+    <details>
+        <summary>🇹🇭 ข้อตกลงการใช้งาน (ภาษาไทย)</summary>
+        <div class="details-content">
+            <p><strong>✅ อนุญาตให้ใช้ SIL Open Font License, Version 1.1.:</strong></p>
+            <ul>
+                <li>ใช้ฟรี ทั้งงานส่วนตัวและงานเชิงพาณิชย์ ใช้กับงานกราฟิก สิ่งพิมพ์ เกม แอป และเว็บไซต์ได้ 
+                    ดัดแปลงและแจกจ่ายฟอนต์ต่อได้ ภายใต้เงื่อนไข SIL Open Font License 1.1 (OFL-1.1) 
+                    ห้ามขายไฟล์ฟอนต์เพียงอย่างเดียว หากดัดแปลงฟอนต์แล้วเผยแพร่ต่อ ต้องใช้ชื่อใหม่ และคงใบอนุญาต OFL 1.1 ไว้ 
+                    อ่านใบอนุญาตฉบับเต็มได้ในไฟล์ OFL.txt ที่แนบมากับฟอนต์ 
+                    *ข้อความนี้เป็นคำอธิบายแบบย่อ โปรดอ้างอิงใบอนุญาต OFL 1.1 ฉบับเต็มเมื่อมีข้อสงสัย</li>
+            </ul>        
+        </div>
+    </details>
+
+    <!-- ปุ่ม Dropdown ภาษาอังกฤษ -->
+    <details>
+        <summary>🇬🇧 Font License Agreement (English)</summary>
+        <div class="details-content">
+            <p><strong>✅ SIL Open Font License, Version 1.1.:</strong></p>
+            <ul>
+                <li>Copyright (c) 2022-2026 Taweechai Assawarangsitsang (TA Font),
+                    สำหรับใส่ข้อความ ลิขสิทธ์ ภาษาอังกฤษ
+                </li>
+                <li>Logo design and branding</li>
+            </ul>
+          
+        </div>
+    </details>
+</div>
+
+    <footer>
+        &copy; 2026 TA Font. All rights reserved.
+    </footer>
+
+</body>
+</html>
