@@ -34,6 +34,44 @@
 
         .font-header { text-align: center; margin-bottom: 40px; }
         .font-header h1 { font-size: 2.5em; margin-bottom: 10px; }
+
+        /* สไตล์สำหรับปุ่ม Dropdown License */
+details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+summary {
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    transition: background-color 0.2s ease;
+}
+summary:hover {
+    background-color: #e2e2e2;
+}
+/* สร้างลูกศรชี้ลง และหมุนเมื่อกดขยาย */
+summary::after {
+    content: '▼';
+    font-size: 0.8em;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+.details-content {
+    padding: 20px;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+}
         
         /* รูปโปรโมทเรียงต่อกัน */
         .promo-images img {
@@ -70,32 +108,143 @@
 
         <div class="promo-images">
             <!-- ใส่รูปโปรโมทฟอนต์ของคุณตรงนี้ -->
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQStaEl5AGvARo1CmXsVHhCZAdulgzJ-qVlafXeW3hziI14?height=660" alt="TA Modern โชว์เคส 1">
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRDSpy5Psi2RbWvBIQSz3XmAca3QdVB2KP6TcbVK4MWK9g?height=660" alt="TA Modern โชว์เคส 2">
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRCchJBXLBkSJTsrzNrNHn6AUzN_5UiLD-Pq5eSUUBBcs0?height=660" alt="TA Modern ตัวอย่างการพิมพ์">
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRUHiFEMVsGT5_sHP3oItMBAV2d9DHYR6di9dBw9ygvf9c?height=660" alt="TA Modern ตัวอย่างการพิมพ์">
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRxZiRQ6L1cSoa8T1wt2JFLAe6nBLR5zXyE48ZmLa0mfx4?height=660" alt="TA Modern ตัวอย่างการพิมพ์">
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQQmmTiF8q3JRr7rvPz83Mp0AZDG0izAppmIYIuIeDeNW7M?height=660" alt="TA Modern ตัวอย่างการพิมพ์">
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQSEkcpAu7FqTbFluk2YKSW8AdgJi-uIKDLrapny0roD6yI?height=660" alt="TA Modern ตัวอย่างการพิมพ์">
-            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQS7wkAogMgbTrH-XhAuWyt9AfHx33R5Qpq4K7dhtiOAzXQ?height=660" alt="TA Modern ตัวอย่างการพิมพ์">
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQStaEl5AGvARo1CmXsVHhCZAdulgzJ-qVlafXeW3hziI14?width=1254&height=1254" width="1254" height="1254" >
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRDSpy5Psi2RbWvBIQSz3XmAca3QdVB2KP6TcbVK4MWK9g?width=1254&height=1254" width="1254" height="1254" >
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRCchJBXLBkSJTsrzNrNHn6AUzN_5UiLD-Pq5eSUUBBcs0?width=1254&height=1254" width="1254" height="1254" >
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRUHiFEMVsGT5_sHP3oItMBAV2d9DHYR6di9dBw9ygvf9c?width=1254&height=1254" width="1254" height="1254" >
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQRxZiRQ6L1cSoa8T1wt2JFLAe6nBLR5zXyE48ZmLa0mfx4?width=1254&height=1254" width="1254" height="1254" >
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQQmmTiF8q3JRr7rvPz83Mp0AZDG0izAppmIYIuIeDeNW7M?width=1254&height=1254" width="1254" height="1254" >
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQSEkcpAu7FqTbFluk2YKSW8AdgJi-uIKDLrapny0roD6yI?width=1254&height=1254" width="1254" height="1254" >
+            <img src="https://1drv.ms/i/c/95ea3aaef6c02923/IQS7wkAogMgbTrH-XhAuWyt9AfHx33R5Qpq4K7dhtiOAzXQ?width=1254&height=1254" width="1254" height="1254" >
         </div>
 
         <div class="license-box">
-            <h3>📝 สัญญาอนุญาต (EULA / License) สำหรับฟอนต์ตัวนี้</h3>
-            <p><strong>✅ ทั้งสองฟอนต์นี้ตั้งใจทำมาเพื่อนำมาแจกให้ใช้ฟรี ภายใต้สัญญาอนุญาตเงื่อนไข SIL Open Font :</strong></p>
-            <ul>
-                <li>ใช้ฟรี ทั้งงานส่วนตัวและงานเชิงพาณิชย์
-ใช้กับงานกราฟิก สิ่งพิมพ์ เกม แอป และเว็บไซต์ได้
-ดัดแปลงและแจกจ่ายฟอนต์ต่อได้ ภายใต้เงื่อนไข SIL Open Font License 1.1 (OFL-1.1)
-                    ห้ามขายไฟล์ฟอนต์เพียงอย่างเดียว
-หากดัดแปลงฟอนต์แล้วเผยแพร่ต่อ ต้องใช้ชื่อใหม่ และคงใบอนุญาต OFL 1.1 ไว้
-อ่านใบอนุญาตฉบับเต็มได้ในไฟล์ OFL.txt ที่แนบมากับฟอนต์
-*ข้อความนี้เป็นคำอธิบายแบบย่อ โปรดอ้างอิงใบอนุญาต OFL 1.1 ฉบับเต็มเมื่อมีข้อสงสัย
+    <h3>📝 สัญญาอนุญาต (EULA / License)</h3>
+    <p>กรุณาอ่านและทำความเข้าใจเงื่อนไขก่อนดาวน์โหลดหรือใช้งาน / Please read the agreement before use.</p>
 
-                </li>
-            </ul>
+    <!-- ปุ่ม Dropdown ภาษาไทย -->
+    <details>
+        <summary>🇹🇭 ข้อตกลงการใช้งาน (ภาษาไทย)</summary>
+        <div class="details-content">
+            <p><strong>✅ อนุญาตให้ใช้ SIL Open Font License, Version 1.1.:</strong></p>
+            <ul>
+                <li>ใช้ฟรี ทั้งงานส่วนตัวและงานเชิงพาณิชย์ ใช้กับงานกราฟิก สิ่งพิมพ์ เกม แอป และเว็บไซต์ได้ 
+                    ดัดแปลงและแจกจ่ายฟอนต์ต่อได้ ภายใต้เงื่อนไข SIL Open Font License 1.1 (OFL-1.1) 
+                    ห้ามขายไฟล์ฟอนต์เพียงอย่างเดียว หากดัดแปลงฟอนต์แล้วเผยแพร่ต่อ ต้องใช้ชื่อใหม่ และคงใบอนุญาต OFL 1.1 ไว้ 
+                    อ่านใบอนุญาตฉบับเต็มได้ในไฟล์ OFL.txt ที่แนบมากับฟอนต์ 
+                    *ข้อความนี้เป็นคำอธิบายแบบย่อ โปรดอ้างอิงใบอนุญาต OFL 1.1 ฉบับเต็มเมื่อมีข้อสงสัย</li>
+            </ul>        
         </div>
-    </div>
+    </details>
+
+    <!-- ปุ่ม Dropdown ภาษาอังกฤษ -->
+    <details>
+        <summary>🇬🇧 Font License Agreement (English)</summary>
+        <div class="details-content">
+            <p><strong>✅ SIL Open Font License, Version 1.1.:</strong></p>
+            <ul>
+                <li>Copyright (c) 2022-2026 Taweechai Assawarangsitsang (TA Font),
+with Reserved Font Name "monothai_MAX".
+Copyright (c) 2022-2026 Taweechai Assawarangsitsang (TA Font),
+with Reserved Font Name "monothai_Mini".
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+</li>
+                <li>Logo design and branding</li>
+            </ul>
+          
+        </div>
+    </details>
+</div>
 
     <footer>
         &copy; 2026 TA Font. All rights reserved.
