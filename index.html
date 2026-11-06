@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyType - Font Foundry Portfolio</title>
+    <style>
+        /* การตั้งค่าสไตล์เบื้องต้นให้ดูสะอาดตาและเป็นมืออาชีพ */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            color: #ccc;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        /* ส่วนโชว์ผลงานฟอนต์ */
+        .font-item {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .font-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        /* ส่วน License และ Contact */
+        .license-box, .contact-box {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            background-color: #111;
+            color: #777;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูด้านบน -->
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#license">License (EULA)</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- หน้า Home: โชว์ผลงานฟอนต์ -->
+    <section id="home" class="container">
+        <h2>Font Family Showcase</h2>
+        
+        <div class="font-item">
+            <h3>Mitr Typeface</h3>
+            <!-- ใส่ชื่อไฟล์รูปแบนเนอร์ฟอนต์ของคุณที่นี่ -->
+            <img src="banner-font-1.jpg" alt="ภาพแบนเนอร์ ฟอนต์ 1">
+            <p>ฟอนต์สไตล์โมเดิร์น เหมาะสำหรับงานพาดหัวและโลโก้ มีให้เลือก 3 น้ำหนัก</p>
+            <img src="detail-font-1.jpg" alt="ภาพรายละเอียด ฟอนต์ 1">
+        </div>
+
+        <div class="font-item">
+            <h3>Siam Classic</h3>
+            <!-- ใส่ชื่อไฟล์รูปแบนเนอร์ฟอนต์ของคุณที่นี่ -->
+            <img src="banner-font-2.jpg" alt="ภาพแบนเนอร์ ฟอนต์ 2">
+            <p>ฟอนต์สไตล์ไทยร่วมสมัย อ่านง่าย สบายตา</p>
+        </div>
+    </section>
+
+    <!-- หน้า สัญญาอนุญาต (EULA) -->
+    <section id="license" class="container">
+        <h2>สัญญาอนุญาต (EULA / License)</h2>
+        <div class="license-box">
+            <h3>✅ สิ่งที่ทำได้ (Permitted)</h3>
+            <ul>
+                <li>ใช้ในงานออกแบบเชิงพาณิชย์ เช่น โปสเตอร์, ป้ายโฆษณา, บรรจุภัณฑ์</li>
+                <li>ใช้ทำกราฟิกบนโซเชียลมีเดีย (Facebook, IG, TikTok)</li>
+                <li>ฝัง (Embed) ฟอนต์ลงในเว็บไซต์ส่วนตัวหรือเว็บไซต์บริษัท (ตามประเภทใบอนุญาต)</li>
+            </ul>
+            
+            <h3>❌ ข้อห้าม (Prohibited)</h3>
+            <ul>
+                <li>ห้ามนำไฟล์ฟอนต์ไปแจกจ่ายต่อ หรือขายต่อโดยเด็ดขาด</li>
+                <li>ห้ามดัดแปลง แก้ไข หรือนำโครงสร้างฟอนต์ไปสร้างเป็นฟอนต์ใหม่</li>
+                <li>ห้ามนำฟอนต์ไปใช้ในงานที่ผิดกฎหมาย หรือขัดต่อศีลธรรมอันดี</li>
+            </ul>
+            <p><em>* กรุณาอ่านเอกสาร EULA ฉบับเต็มที่แนบไปพร้อมกับไฟล์ฟอนต์ก่อนใช้งานจริง</em></p>
+        </div>
+    </section>
+
+    <!-- หน้า ข้อมูลติดต่อ -->
+    <section id="contact" class="container">
+        <h2>ติดต่อเรา (Contact)</h2>
+        <div class="contact-box">
+            <p>หากสนใจสั่งซื้อฟอนต์ สอบถามเรื่องลิขสิทธิ์ หรือจ้างออกแบบฟอนต์เฉพาะสำหรับแบรนด์ (Custom Font) สามารถติดต่อได้ที่:</p>
+            <ul>
+                <li><strong>Email:</strong> hello@yourfontfoundry.com</li>
+                <li><strong>Facebook Page:</strong> YourFontFoundry</li>
+                <li><strong>Instagram:</strong> @YourFontFoundry</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Your Font Foundry. All rights reserved.
+    </footer>
+
+</body>
+</html>
