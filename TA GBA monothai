@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA Modern - TA Font</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        header { background-color: #111; color: #fff; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: center; gap: 30px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        nav a:hover { color: #ccc; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        .back-btn { display: inline-block; margin-bottom: 20px; color: #555; text-decoration: none; font-weight: bold; }
+        .back-btn:hover { color: #000; text-decoration: underline; }
+
+        .font-header { text-align: center; margin-bottom: 40px; }
+        .font-header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        
+        /* รูปโปรโมทเรียงต่อกัน */
+        .promo-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ส่วน License เฉพาะฟอนต์ */
+        .license-box { background-color: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #ddd; margin-top: 40px; }
+        .license-box h3 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        ul { padding-left: 20px; }
+
+        footer { background-color: #111; color: #777; text-align: center; padding: 20px 0; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">กลับหน้าแรก (Home)</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-btn">← กลับไปหน้ารวมฟอนต์</a>
+        
+        <div class="font-header">
+            <h1>TA Modern</h1>
+            <p>ฟอนต์สไตล์โมเดิร์นหัวตัด เหมาะสำหรับพาดหัวและงานกราฟิกที่ต้องการความโดดเด่น มีทั้งหมด 3 น้ำหนัก (Light, Regular, Bold)</p>
+        </div>
+
+        <div class="promo-images">
+            <!-- ใส่รูปโปรโมทฟอนต์ของคุณตรงนี้ -->
+            <img src="ta-modern-promo1.jpg" alt="TA Modern โชว์เคส 1">
+            <img src="ta-modern-promo2.jpg" alt="TA Modern โชว์เคส 2">
+            <img src="ta-modern-promo3.jpg" alt="TA Modern ตัวอย่างการพิมพ์">
+        </div>
+
+        <div class="license-box">
+            <h3>📝 สัญญาอนุญาต (EULA / License) สำหรับฟอนต์ตัวนี้</h3>
+            <p><strong>✅ อนุญาตให้ใช้ (Permitted):</strong></p>
+            <ul>
+                <li>งานออกแบบกราฟิกเชิงพาณิชย์ทั่วไป (สื่อสิ่งพิมพ์, ป้ายโฆษณา, โซเชียลมีเดีย)</li>
+                <li>นำไปทำเป็นโลโก้แบรนด์สินค้าได้</li>
+            </ul>
+            <p><strong>❌ ไม่อนุญาตให้ใช้ (Prohibited):</strong></p>
+            <ul>
+                <li>ห้ามแจกจ่าย หรือขายไฟล์ฟอนต์ .ttf / .otf ต่อ</li>
+                <li>ห้ามดัดแปลงแก้ไขเพื่อสร้างเป็นฟอนต์ใหม่</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 TA Font. All rights reserved.
+    </footer>
+
+</body>
+</html>
