@@ -5,212 +5,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข้อมูลเพิ่มเติมและบทความ - TA Font</title>
     
-    <!-- นำเข้าฟอนต์ Sarabun ให้เหมือนหน้าหลัก -->
+    <!-- นำเข้าฟอนต์ Sarabun จาก Google Fonts ให้เหมือนหน้า index.html -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-  /* Font Compatibility Unified Section - Scoped Styles */
-  .ta-compat-section {
-    max-width: 1140px;
-    margin: 2.5rem auto;
-    padding: 0 1rem;
-    font-family: 'IBM Plex Sans Thai', 'Sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1e293b;
-    line-height: 1.65;
-  }
+        /* =========================================================
+           สไตล์โครงสร้างหลัก (Header, Body, Footer) ให้เหมือน index.html
+           ========================================================= */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            color: #ccc;
+        }
+        .page-header {
+            max-width: 1140px;
+            margin: 40px auto 10px auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        .page-header h1 {
+            margin-bottom: 8px;
+            color: #111;
+        }
+        .page-header p {
+            color: #666;
+            margin-top: 0;
+        }
+        .article-heading {
+            max-width: 1140px;
+            margin: 2rem auto 1rem auto;
+            padding: 0 1rem 0.5rem 1rem;
+            font-size: 1.45rem;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        footer {
+            background-color: #111;
+            color: #777;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
 
-  .ta-compat-section * {
-    box-sizing: border-box;
-  }
+        /* =========================================================
+           Font Compatibility Unified Section - Scoped Styles
+           ========================================================= */
+        .ta-compat-section {
+            max-width: 1140px;
+            margin: 1.5rem auto 2.5rem auto;
+            padding: 0 1rem;
+            font-family: 'Sarabun', sans-serif;
+            color: #1e293b;
+            line-height: 1.65;
+        }
 
-  /* กล่องอธิบายระบบ Mark และ Ligature ด้านบน */
-  .ta-info-box {
-    background-color: #f8fafc;
-    border-left: 4px solid #2563eb;
-    border-radius: 0 10px 10px 0;
-    padding: 1.35rem 1.6rem;
-    margin-bottom: 2.25rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-  }
+        .ta-compat-section * {
+            box-sizing: border-box;
+        }
 
-  .ta-info-box h2 {
-    margin: 0 0 0.75rem 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #0f172a;
-  }
+        /* กล่องอธิบายระบบ Mark และ Ligature ด้านบน */
+        .ta-info-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #2563eb;
+            border-radius: 0 10px 10px 0;
+            padding: 1.35rem 1.6rem;
+            margin-bottom: 2.25rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        }
 
-  .ta-info-box p {
-    margin: 0 0 0.65rem 0;
-    font-size: 0.95rem;
-    color: #334155;
-  }
+        .ta-info-box h2 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
 
-  .ta-info-box p:last-child {
-    margin-bottom: 0;
-  }
+        .ta-info-box p {
+            margin: 0 0 0.65rem 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
 
-  /* หัวข้อตาราง */
-  .ta-table-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 1rem 0;
-  }
+        .ta-info-box p:last-child {
+            margin-bottom: 0;
+        }
 
-  /* ตัวครอบตารางสำหรับเลื่อนซ้าย-ขวาบนมือถือ */
-  .ta-table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    margin-bottom: 2rem;
-    background: #ffffff;
-  }
+        /* หัวข้อตาราง */
+        .ta-table-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 1rem 0;
+        }
 
-  .ta-compat-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    font-size: 0.9rem;
-    min-width: 880px;
-  }
+        /* ตัวครอบตารางสำหรับเลื่อนซ้าย-ขวาบนมือถือ */
+        .ta-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            background: #ffffff;
+        }
 
-  .ta-compat-table thead {
-    background-color: #f1f5f9;
-    border-bottom: 2px solid #e2e8f0;
-  }
+        .ta-compat-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+            min-width: 880px;
+        }
 
-  .ta-compat-table th {
-    padding: 0.95rem 0.9rem;
-    font-weight: 600;
-    color: #334155;
-    white-space: nowrap;
-  }
+        .ta-compat-table thead {
+            background-color: #f1f5f9;
+            border-bottom: 2px solid #e2e8f0;
+        }
 
-  .ta-compat-table td {
-    padding: 0.9rem;
-    border-bottom: 1px solid #e2e8f0;
-    vertical-align: top;
-  }
+        .ta-compat-table th {
+            padding: 0.95rem 0.9rem;
+            font-weight: 600;
+            color: #334155;
+            white-space: nowrap;
+        }
 
-  .ta-compat-table tbody tr:last-child td {
-    border-bottom: none;
-  }
+        .ta-compat-table td {
+            padding: 0.9rem;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
 
-  .ta-compat-table tbody tr:hover {
-    background-color: #f8fafc;
-  }
+        .ta-compat-table tbody tr:last-child td {
+            border-bottom: none;
+        }
 
-  /* คอลัมน์หมวดหมู่ */
-  .ta-cat {
-    color: #64748b;
-    font-size: 0.83rem;
-    font-weight: 500;
-  }
+        .ta-compat-table tbody tr:hover {
+            background-color: #f8fafc;
+        }
 
-  /* คอลัมน์ชื่อโปรแกรม */
-  .ta-app-name {
-    font-weight: 600;
-    color: #0f172a;
-  }
+        /* คอลัมน์หมวดหมู่ */
+        .ta-cat {
+            color: #64748b;
+            font-size: 0.83rem;
+            font-weight: 500;
+        }
 
-  .ta-app-ver {
-    display: block;
-    font-size: 0.82rem;
-    color: #64748b;
-    margin-top: 0.15rem;
-  }
+        /* คอลัมน์ชื่อโปรแกรม */
+        .ta-app-name {
+            font-weight: 600;
+            color: #0f172a;
+        }
 
-  /* ป้ายสถานะ (Badges) */
-  .ta-badge {
-    display: inline-block;
-    padding: 0.25rem 0.65rem;
-    font-size: 0.78rem;
-    font-weight: 600;
-    border-radius: 9999px;
-    white-space: nowrap;
-  }
+        .ta-app-ver {
+            display: block;
+            font-size: 0.82rem;
+            color: #64748b;
+            margin-top: 0.15rem;
+        }
 
-  .ta-badge-full {
-    background-color: #dcfce7;
-    color: #166534;
-  }
+        /* ป้ายสถานะ (Badges) */
+        .ta-badge {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            white-space: nowrap;
+        }
 
-  .ta-badge-ok {
-    background-color: #dbeafe;
-    color: #1e40af;
-  }
+        .ta-badge-full {
+            background-color: #dcfce7;
+            color: #166534;
+        }
 
-  .ta-badge-partial {
-    background-color: #fef3c7;
-    color: #92400e;
-  }
+        .ta-badge-ok {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
 
-  .ta-badge-no {
-    background-color: #fee2e2;
-    color: #991b1b;
-  }
+        .ta-badge-partial {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
 
-  /* จัดระเบียบข้อความในคอลัมน์เงื่อนไข */
-  .ta-detail-item {
-    margin-bottom: 0.45rem;
-  }
+        .ta-badge-no {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
 
-  .ta-detail-item:last-child {
-    margin-bottom: 0;
-  }
+        /* จัดระเบียบข้อความในคอลัมน์เงื่อนไข */
+        .ta-detail-item {
+            margin-bottom: 0.45rem;
+        }
 
-  .ta-detail-tag {
-    font-weight: 600;
-    color: #0f172a;
-  }
+        .ta-detail-item:last-child {
+            margin-bottom: 0;
+        }
 
-  /* โค้ดอินไลน์ */
-  .ta-compat-section code {
-    background-color: #f1f5f9;
-    padding: 0.12rem 0.38rem;
-    border-radius: 4px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 0.85em;
-    color: #0f172a;
-  }
+        .ta-detail-tag {
+            font-weight: 600;
+            color: #0f172a;
+        }
 
-  /* กล่องคำแนะนำรวมด้านล่างสุด */
-  .ta-tip-box {
-    background-color: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 10px;
-    padding: 1.35rem 1.6rem;
-    font-size: 0.93rem;
-    color: #78350f;
-  }
+        /* โค้ดอินไลน์ */
+        .ta-compat-section code {
+            background-color: #f1f5f9;
+            padding: 0.12rem 0.38rem;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.85em;
+            color: #0f172a;
+        }
 
-  .ta-tip-box strong {
-    color: #92400e;
-  }
+        /* กล่องคำแนะนำรวมด้านล่างสุด */
+        .ta-tip-box {
+            background-color: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 10px;
+            padding: 1.35rem 1.6rem;
+            font-size: 0.93rem;
+            color: #78350f;
+        }
 
-  .ta-tip-box code {
-    background-color: #fef3c7;
-    color: #78350f;
-  }
+        .ta-tip-box strong {
+            color: #92400e;
+        }
 
-  .ta-tip-block {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed #fcd34d;
-  }
+        .ta-tip-box code {
+            background-color: #fef3c7;
+            color: #78350f;
+        }
 
-  .ta-tip-block:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-</style>
-    
+        .ta-tip-block {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #fcd34d;
+        }
+
+        .ta-tip-block:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -232,343 +298,340 @@
     <!-- ชื่อบทความที่ 1 -->
     <h2 class="article-heading">บทความ: การรองรับระบบ Mark ในโปรแกรมยอดนิยมปัจจุบัน</h2>
 
-    <!-- =========================================================
-         เนื้อหา HTML จากไฟล์ที่ 2 (gemini-code-1795194719061.html)
-         ========================================================= -->
     <section class="ta-compat-section" id="font-compatibility">
 
-  <!-- กล่องอธิบายระบบ Mark และ Ligature -->
-  <div class="ta-info-box">
-    <h2>ทำความรู้จักระบบฟอนต์ภาษาไทย: ระบบ Mark vs ระบบ Ligature</h2>
-    <p>
-      <strong>1. ระบบ Mark (OpenType <code>mark</code> / <code>mkmk</code>):</strong> ฟอนต์ภาษาไทยยุคใหม่ใช้เทคโนโลยี <strong>Mark Positioning (จุดยึด Anchor)</strong> แทนการสร้างตัวอักษรสำเร็จรูปแบบเก่า ข้อดีคือ <strong>สระและวรรณยุกต์จะจัดตำแหน่งอัตโนมัติอย่างแม่นยำ</strong> และสามารถปรับระยะห่างระหว่างตัวอักษร (Tracking / Letter Spacing) ได้โดยที่สระไม่หลุดตำแหน่ง ทั้งนี้โปรแกรมที่ใช้งานต้องรองรับการประมวลผลภาษาซับซ้อน (Complex Script Shaping) ด้วย
-    </p>
-    <p>
-      <strong>2. ระบบ Ligature (OpenType <code>liga</code> / <code>rlig</code> / <code>ccmp</code> และ PUA):</strong> คือเทคนิคการสร้างตัวอักษรสำเร็จรูปเพื่อแทนที่ชุดตัวอักษรที่พิมพ์ติดกัน (เช่น การจับคู่ <code>ญ</code> + <code>ุ</code> ให้กลายเป็น <code>ญ</code> ไม่มีเชิง หรือการรวมพยัญชนะ+สระ+วรรณยุกต์เป็นตัวเดียวเพื่อแก้ปัญหาสระลอยในโปรแกรมที่ไม่รองรับ <code>mark</code>) ซึ่งโปรแกรมส่วนใหญ่รองรับ <code>liga</code> ได้กว้างกว่า <code>mark</code> ยกเว้น <strong>Microsoft Word รุ่นใหม่</strong> ที่ตัดการรองรับฟอนต์ไทยระบบ Ligature/PUA ยุคเก่าออกไปแล้ว
-    </p>
-  </div>
+        <!-- กล่องอธิบายระบบ Mark และ Ligature -->
+        <div class="ta-info-box">
+            <h2>ทำความรู้จักระบบฟอนต์ภาษาไทย: ระบบ Mark vs ระบบ Ligature</h2>
+            <p>
+                <strong>1. ระบบ Mark (OpenType <code>mark</code> / <code>mkmk</code>):</strong> ฟอนต์ภาษาไทยยุคใหม่ใช้เทคโนโลยี <strong>Mark Positioning (จุดยึด Anchor)</strong> แทนการสร้างตัวอักษรสำเร็จรูปแบบเก่า ข้อดีคือ <strong>สระและวรรณยุกต์จะจัดตำแหน่งอัตโนมัติอย่างแม่นยำ</strong> และสามารถปรับระยะห่างระหว่างตัวอักษร (Tracking / Letter Spacing) ได้โดยที่สระไม่หลุดตำแหน่ง ทั้งนี้โปรแกรมที่ใช้งานต้องรองรับการประมวลผลภาษาซับซ้อน (Complex Script Shaping) ด้วย
+            </p>
+            <p>
+                <strong>2. ระบบ Ligature (OpenType <code>liga</code> / <code>rlig</code> / <code>ccmp</code> และ PUA):</strong> คือเทคนิคการสร้างตัวอักษรสำเร็จรูปเพื่อแทนที่ชุดตัวอักษรที่พิมพ์ติดกัน (เช่น การจับคู่ <code>ญ</code> + <code>ุ</code> ให้กลายเป็น <code>ญ</code> ไม่มีเชิง หรือการรวมพยัญชนะ+สระ+วรรณยุกต์เป็นตัวเดียวเพื่อแก้ปัญหาสระลอยในโปรแกรมที่ไม่รองรับ <code>mark</code>) ซึ่งโปรแกรมส่วนใหญ่รองรับ <code>liga</code> ได้กว้างกว่า <code>mark</code> ยกเว้น <strong>Microsoft Word รุ่นใหม่</strong> ที่ตัดการรองรับฟอนต์ไทยระบบ Ligature/PUA ยุคเก่าออกไปแล้ว
+            </p>
+        </div>
 
-  <!-- ตารางเปรียบเทียบฉบับรวม -->
-  <h3 class="ta-table-title">ตารางเปรียบเทียบการรองรับระบบ Mark และ Ligature ของแต่ละโปรแกรม</h3>
-  <div class="ta-table-wrapper">
-    <table class="ta-compat-table">
-      <thead>
-        <tr>
-          <th style="width: 14%;">หมวดหมู่</th>
-          <th style="width: 23%;">ชื่อโปรแกรม</th>
-          <th style="width: 13%;">ระบบ Mark</th>
-          <th style="width: 14%;">ระบบ Ligature</th>
-          <th style="width: 36%;">เงื่อนไข / การตั้งค่าเพิ่มเติม / วิธีแก้ไข</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- 1. Adobe PS, AI, ID -->
-        <tr>
-          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
-          <td>
-            <span class="ta-app-name">Adobe Photoshop, Illustrator, InDesign</span>
-            <span class="ta-app-ver">Mark: CC ขึ้นไป | Liga: CS5 / CS6 / CC+</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> ต้องเปิดใช้งาน <strong>World-Ready Layout</strong> (ในแผง Paragraph) หรือ <strong>World-Ready Composer</strong> ใน InDesign</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งาน <strong>Standard Ligatures</strong> ในแผง Character เป็นค่าเริ่มต้น (ทำงานได้ทันทีโดยไม่ต้องเปิด World-Ready Layout)</div>
-          </td>
-        </tr>
+        <!-- ตารางเปรียบเทียบฉบับรวม -->
+        <h3 class="ta-table-title">ตารางเปรียบเทียบการรองรับระบบ Mark และ Ligature ของแต่ละโปรแกรม</h3>
+        <div class="ta-table-wrapper">
+            <table class="ta-compat-table">
+                <thead>
+                    <tr>
+                        <th style="width: 14%;">หมวดหมู่</th>
+                        <th style="width: 23%;">ชื่อโปรแกรม</th>
+                        <th style="width: 13%;">ระบบ Mark</th>
+                        <th style="width: 14%;">ระบบ Ligature</th>
+                        <th style="width: 36%;">เงื่อนไข / การตั้งค่าเพิ่มเติม / วิธีแก้ไข</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1. Adobe PS, AI, ID -->
+                    <tr>
+                        <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+                        <td>
+                            <span class="ta-app-name">Adobe Photoshop, Illustrator, InDesign</span>
+                            <span class="ta-app-ver">Mark: CC ขึ้นไป | Liga: CS5 / CS6 / CC+</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> ต้องเปิดใช้งาน <strong>World-Ready Layout</strong> (ในแผง Paragraph) หรือ <strong>World-Ready Composer</strong> ใน InDesign</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งาน <strong>Standard Ligatures</strong> ในแผง Character เป็นค่าเริ่มต้น (ทำงานได้ทันทีโดยไม่ต้องเปิด World-Ready Layout)</div>
+                        </td>
+                    </tr>
 
-        <!-- 2. Figma -->
-        <tr>
-          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
-          <td>
-            <span class="ta-app-name">Figma</span>
-            <span class="ta-app-ver">Web &amp; Desktop</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับอัตโนมัติทันที (ใช้เอนจิน HarfBuzz)</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งาน <code>Ligatures</code> อัตโนมัติ และตั้งค่าเพิ่มได้ที่เมนู <code>Type Details</code></div>
-          </td>
-        </tr>
+                    <!-- 2. Figma -->
+                    <tr>
+                        <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+                        <td>
+                            <span class="ta-app-name">Figma</span>
+                            <span class="ta-app-ver">Web &amp; Desktop</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับอัตโนมัติทันที (ใช้เอนจิน HarfBuzz)</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งาน <code>Ligatures</code> อัตโนมัติ และตั้งค่าเพิ่มได้ที่เมนู <code>Type Details</code></div>
+                        </td>
+                    </tr>
 
-        <!-- 3. Affinity -->
-        <tr>
-          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
-          <td>
-            <span class="ta-app-name">Affinity Designer, Photo, Publisher</span>
-            <span class="ta-app-ver">Mark: v2 ขึ้นไป | Liga: ทุกเวอร์ชัน</span>
-          </td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> ควรตั้งค่า Typography Script / Language ในแผง Character เป็น <strong>Thai</strong> เพื่อให้สระซ้อนทำงานครบ</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งาน <code>Standard Ligatures</code> ในแผง Typography เป็นค่าเริ่มต้น</div>
-          </td>
-        </tr>
+                    <!-- 3. Affinity -->
+                    <tr>
+                        <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+                        <td>
+                            <span class="ta-app-name">Affinity Designer, Photo, Publisher</span>
+                            <span class="ta-app-ver">Mark: v2 ขึ้นไป | Liga: ทุกเวอร์ชัน</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> ควรตั้งค่า Typography Script / Language ในแผง Character เป็น <strong>Thai</strong> เพื่อให้สระซ้อนทำงานครบ</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งาน <code>Standard Ligatures</code> ในแผง Typography เป็นค่าเริ่มต้น</div>
+                        </td>
+                    </tr>
 
-        <!-- 4. CorelDRAW -->
-        <tr>
-          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
-          <td>
-            <span class="ta-app-name">CorelDRAW</span>
-            <span class="ta-app-ver">เวอร์ชันใหม่</span>
-          </td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับ OpenType Complex Script อัตโนมัติ</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งานได้ในหน้าต่าง OpenType Features</div>
-          </td>
-        </tr>
+                    <!-- 4. CorelDRAW -->
+                    <tr>
+                        <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+                        <td>
+                            <span class="ta-app-name">CorelDRAW</span>
+                            <span class="ta-app-ver">เวอร์ชันใหม่</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับ OpenType Complex Script อัตโนมัติ</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> เปิดใช้งานได้ในหน้าต่าง OpenType Features</div>
+                        </td>
+                    </tr>
 
-        <!-- 5. Canva -->
-        <tr>
-          <td class="ta-cat">กราฟิกออนไลน์</td>
-          <td>
-            <span class="ta-app-name">Canva</span>
-            <span class="ta-app-ver">Web &amp; App</span>
-          </td>
-          <td><span class="ta-badge ta-badge-partial">รองรับบางส่วน</span></td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> ฟอนต์ที่อัปโหลดเองบางตัวเกิดอาการสระลอย/สระจมเมื่อใช้ระบบ Mark อย่างเดียว</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> กดเลือกกล่องข้อความ ไปที่ <code>Advanced settings</code> &gt; แท็บ <code>Advanced</code> แล้วเปิดสวิตช์ <strong>Ligatures</strong></div>
-          </td>
-        </tr>
+                    <!-- 5. Canva -->
+                    <tr>
+                        <td class="ta-cat">กราฟิกออนไลน์</td>
+                        <td>
+                            <span class="ta-app-name">Canva</span>
+                            <span class="ta-app-ver">Web &amp; App</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-partial">รองรับบางส่วน</span></td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> ฟอนต์ที่อัปโหลดเองบางตัวเกิดอาการสระลอย/สระจมเมื่อใช้ระบบ Mark อย่างเดียว</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> กดเลือกกล่องข้อความ ไปที่ <code>Advanced settings</code> &gt; แท็บ <code>Advanced</code> แล้วเปิดสวิตช์ <strong>Ligatures</strong></div>
+                        </td>
+                    </tr>
 
-        <!-- 6. Microsoft Office -->
-        <tr>
-          <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
-          <td>
-            <span class="ta-app-name">Microsoft Word, PowerPoint, Excel</span>
-            <span class="ta-app-ver">2016 / 2019 / 2021 / 365</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-partial">รองรับบางส่วน</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับอัตโนมัติ (Word รุ่นใหม่บังคับใช้ฟอนต์ระบบ Mark เป็นหลัก)</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> รองรับเฉพาะ OpenType <code>liga</code> มาตรฐานเมื่อเข้าไปเปิดที่ <code>Font &gt; Advanced &gt; Ligatures</code> <strong>แต่ตัดการรองรับฟอนต์ไทยระบบ Ligature/PUA รุ่นเก่าออกไปแล้ว</strong> (เช่น ตระกูล PSL / JS / DSN ยุคเก่า จะเกิดอาการสระลอยหรือเพี้ยน)</div>
-          </td>
-        </tr>
+                    <!-- 6. Microsoft Office -->
+                    <tr>
+                        <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+                        <td>
+                            <span class="ta-app-name">Microsoft Word, PowerPoint, Excel</span>
+                            <span class="ta-app-ver">2016 / 2019 / 2021 / 365</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-partial">รองรับบางส่วน</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับอัตโนมัติ (Word รุ่นใหม่บังคับใช้ฟอนต์ระบบ Mark เป็นหลัก)</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> รองรับเฉพาะ OpenType <code>liga</code> มาตรฐานเมื่อเข้าไปเปิดที่ <code>Font &gt; Advanced &gt; Ligatures</code> <strong>แต่ตัดการรองรับฟอนต์ไทยระบบ Ligature/PUA รุ่นเก่าออกไปแล้ว</strong> (เช่น ตระกูล PSL / JS / DSN ยุคเก่า จะเกิดอาการสระลอยหรือเพี้ยน)</div>
+                        </td>
+                    </tr>
 
-        <!-- 7. Apple iWork -->
-        <tr>
-          <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
-          <td>
-            <span class="ta-app-name">Apple Pages, Keynote, Numbers</span>
-            <span class="ta-app-ver">macOS / iPadOS / iOS</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านเอนจิน <strong>Core Text</strong> ของ Apple</td>
-        </tr>
+                    <!-- 7. Apple iWork -->
+                    <tr>
+                        <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+                        <td>
+                            <span class="ta-app-name">Apple Pages, Keynote, Numbers</span>
+                            <span class="ta-app-ver">macOS / iPadOS / iOS</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านเอนจิน <strong>Core Text</strong> ของ Apple</td>
+                    </tr>
 
-        <!-- 8. Google Workspace -->
-        <tr>
-          <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
-          <td>
-            <span class="ta-app-name">Google Docs, Slides, Sheets</span>
-            <span class="ta-app-ver">Web</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>รองรับทั้งสองระบบอัตโนมัติผ่านเอนจินเรนเดอร์ข้อความของเว็บเบราว์เซอร์</td>
-        </tr>
+                    <!-- 8. Google Workspace -->
+                    <tr>
+                        <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+                        <td>
+                            <span class="ta-app-name">Google Docs, Slides, Sheets</span>
+                            <span class="ta-app-ver">Web</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>รองรับทั้งสองระบบอัตโนมัติผ่านเอนจินเรนเดอร์ข้อความของเว็บเบราว์เซอร์</td>
+                    </tr>
 
-        <!-- 9. LibreOffice -->
-        <tr>
-          <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
-          <td>
-            <span class="ta-app-name">LibreOffice Writer, Impress</span>
-            <span class="ta-app-ver">Windows / macOS / Linux</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านเอนจิน <strong>HarfBuzz</strong></td>
-        </tr>
+                    <!-- 9. LibreOffice -->
+                    <tr>
+                        <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+                        <td>
+                            <span class="ta-app-name">LibreOffice Writer, Impress</span>
+                            <span class="ta-app-ver">Windows / macOS / Linux</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านเอนจิน <strong>HarfBuzz</strong></td>
+                    </tr>
 
-        <!-- 10. Procreate -->
-        <tr>
-          <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
-          <td>
-            <span class="ta-app-name">Procreate</span>
-            <span class="ta-app-ver">iPadOS เวอร์ชันปัจจุบัน</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านระบบ <strong>Core Text</strong> ของ iPadOS</td>
-        </tr>
+                    <!-- 10. Procreate -->
+                    <tr>
+                        <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+                        <td>
+                            <span class="ta-app-name">Procreate</span>
+                            <span class="ta-app-ver">iPadOS เวอร์ชันปัจจุบัน</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านระบบ <strong>Core Text</strong> ของ iPadOS</td>
+                    </tr>
 
-        <!-- 11. Clip Studio Paint 2.0+ -->
-        <tr>
-          <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
-          <td>
-            <span class="ta-app-name">Clip Studio Paint</span>
-            <span class="ta-app-ver">เวอร์ชัน 2.0 ขึ้นไป</span>
-          </td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับการจัดตำแหน่ง Mark ภาษาไทยแล้ว (ต่างจากเวอร์ชัน 1.x เก่าที่วรรณยุกต์ลอย)</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> รองรับ <code>Ligatures</code> ตั้งแต่ v2.0 และ <code>Contextual Alternates</code> ใน v3.0 (ตั้งค่าใน <code>Sub Tool Detail &gt; Font &gt; OpenType</code>)</div>
-          </td>
-        </tr>
+                    <!-- 11. Clip Studio Paint 2.0+ -->
+                    <tr>
+                        <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+                        <td>
+                            <span class="ta-app-name">Clip Studio Paint</span>
+                            <span class="ta-app-ver">เวอร์ชัน 2.0 ขึ้นไป</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Mark:</span> รองรับการจัดตำแหน่ง Mark ภาษาไทยแล้ว (ต่างจากเวอร์ชัน 1.x เก่าที่วรรณยุกต์ลอย)</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">Ligature:</span> รองรับ <code>Ligatures</code> ตั้งแต่ v2.0 และ <code>Contextual Alternates</code> ใน v3.0 (ตั้งค่าใน <code>Sub Tool Detail &gt; Font &gt; OpenType</code>)</div>
+                        </td>
+                    </tr>
 
-        <!-- 12. ibisPaint X -->
-        <tr>
-          <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
-          <td>
-            <span class="ta-app-name">ibisPaint X</span>
-            <span class="ta-app-ver">iOS / Android</span>
-          </td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-ok">รองรับตาม OS</span></td>
-          <td>รองรับผ่านระบบเรนเดอร์ข้อความของระบบปฏิบัติการ (iOS / Android)</td>
-        </tr>
+                    <!-- 12. ibisPaint X -->
+                    <tr>
+                        <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+                        <td>
+                            <span class="ta-app-name">ibisPaint X</span>
+                            <span class="ta-app-ver">iOS / Android</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับตาม OS</span></td>
+                        <td>รองรับผ่านระบบเรนเดอร์ข้อความของระบบปฏิบัติการ (iOS / Android)</td>
+                    </tr>
 
-        <!-- 13. Adobe Premiere Pro / AE -->
-        <tr>
-          <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
-          <td>
-            <span class="ta-app-name">Adobe Premiere Pro, After Effects</span>
-            <span class="ta-app-ver">CC 2020 ขึ้นไป</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>ต้องตั้งค่า Text Engine ในเมนู Preferences เป็น <strong>South Asian and Middle Eastern</strong> เพื่อให้ทั้งระบบ Mark และ OpenType Ligatures ทำงานสมบูรณ์</td>
-        </tr>
+                    <!-- 13. Adobe Premiere Pro / AE -->
+                    <tr>
+                        <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+                        <td>
+                            <span class="ta-app-name">Adobe Premiere Pro, After Effects</span>
+                            <span class="ta-app-ver">CC 2020 ขึ้นไป</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>ต้องตั้งค่า Text Engine ในเมนู Preferences เป็น <strong>South Asian and Middle Eastern</strong> เพื่อให้ทั้งระบบ Mark และ OpenType Ligatures ทำงานสมบูรณ์</td>
+                    </tr>
 
-        <!-- 14. Final Cut Pro / Motion -->
-        <tr>
-          <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
-          <td>
-            <span class="ta-app-name">Final Cut Pro, Apple Motion</span>
-            <span class="ta-app-ver">macOS</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านระบบ <strong>Core Text</strong> ของ Apple</td>
-        </tr>
+                    <!-- 14. Final Cut Pro / Motion -->
+                    <tr>
+                        <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+                        <td>
+                            <span class="ta-app-name">Final Cut Pro, Apple Motion</span>
+                            <span class="ta-app-ver">macOS</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>รองรับทั้งระบบ Mark และ Ligature อัตโนมัติผ่านระบบ <strong>Core Text</strong> ของ Apple</td>
+                    </tr>
 
-        <!-- 15. DaVinci Resolve (Text ปกติ) -->
-        <tr>
-          <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
-          <td>
-            <span class="ta-app-name">DaVinci Resolve (เครื่องมือ Text ปกติ)</span>
-            <span class="ta-app-ver">หน้า Edit</span>
-          </td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
-          <td>ใช้งานได้ในเครื่องมือ <strong>Text</strong> ทั่วไปบนหน้า Edit โดยอ่านตารางฟอนต์ตามระบบปฏิบัติการ (<em>แต่มีปัญหาในโหมด Text+</em>)</td>
-        </tr>
+                    <!-- 15. DaVinci Resolve (Text ปกติ) -->
+                    <tr>
+                        <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+                        <td>
+                            <span class="ta-app-name">DaVinci Resolve (เครื่องมือ Text ปกติ)</span>
+                            <span class="ta-app-ver">หน้า Edit</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+                        <td>ใช้งานได้ในเครื่องมือ <strong>Text</strong> ทั่วไปบนหน้า Edit โดยอ่านตารางฟอนต์ตามระบบปฏิบัติการ (<em>แต่มีปัญหาในโหมด Text+</em>)</td>
+                    </tr>
 
-        <!-- 16. DaVinci Resolve (Text+ / Fusion) -->
-        <tr>
-          <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
-          <td>
-            <span class="ta-app-name">DaVinci Resolve (โหมด Text+ / Fusion)</span>
-            <span class="ta-app-ver">หน้า Edit / Fusion</span>
-          </td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> เอนจินเรนเดอร์ของ Text+ ไม่อ่านทั้งตาราง <code>mark</code> และ OpenType Ligatures ทำให้ <strong>สระจมหรือวรรณยุกต์ลอย</strong></div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> แนะนำให้สร้างข้อความเป็นไฟล์ PNG โปร่งใสจากโปรแกรมกราฟิกที่รองรับแทน</div>
-          </td>
-        </tr>
+                    <!-- 16. DaVinci Resolve (Text+ / Fusion) -->
+                    <tr>
+                        <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+                        <td>
+                            <span class="ta-app-name">DaVinci Resolve (โหมด Text+ / Fusion)</span>
+                            <span class="ta-app-ver">หน้า Edit / Fusion</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> เอนจินเรนเดอร์ของ Text+ ไม่อ่านทั้งตาราง <code>mark</code> และ OpenType Ligatures ทำให้ <strong>สระจมหรือวรรณยุกต์ลอย</strong></div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> แนะนำให้สร้างข้อความเป็นไฟล์ PNG โปร่งใสจากโปรแกรมกราฟิกที่รองรับแทน</div>
+                        </td>
+                    </tr>
 
-        <!-- 17. CapCut -->
-        <tr>
-          <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
-          <td>
-            <span class="ta-app-name">CapCut</span>
-            <span class="ta-app-ver">Mobile &amp; Desktop</span>
-          </td>
-          <td><span class="ta-badge ta-badge-partial">รองรับไม่สมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ / ไม่เสถียร</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> เอนจินเรนเดอร์มักไม่อ่านตาราง GSUB (<code>liga</code>), Kerning และ Mark ของฟอนต์ที่นำเข้าเองอย่างสมบูรณ์ เกิดอาการ <strong>วรรณยุกต์ลอยหรือสระซ้อน</strong> เมื่อใส่แอนิเมชันข้อความหรือปรับระยะห่างตัวอักษร</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> ตั้งค่า Character Spacing เป็น <code>0</code> เท่านั้น หรือทำข้อความเป็นไฟล์ PNG โปร่งใสมาวางแทน</div>
-          </td>
-        </tr>
+                    <!-- 17. CapCut -->
+                    <tr>
+                        <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+                        <td>
+                            <span class="ta-app-name">CapCut</span>
+                            <span class="ta-app-ver">Mobile &amp; Desktop</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-partial">รองรับไม่สมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ / ไม่เสถียร</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> เอนจินเรนเดอร์มักไม่อ่านตาราง GSUB (<code>liga</code>), Kerning และ Mark ของฟอนต์ที่นำเข้าเองอย่างสมบูรณ์ เกิดอาการ <strong>วรรณยุกต์ลอยหรือสระซ้อน</strong> เมื่อใส่แอนิเมชันข้อความหรือปรับระยะห่างตัวอักษร</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> ตั้งค่า Character Spacing เป็น <code>0</code> เท่านั้น หรือทำข้อความเป็นไฟล์ PNG โปร่งใสมาวางแทน</div>
+                        </td>
+                    </tr>
 
-        <!-- 18. Web Browsers -->
-        <tr>
-          <td class="ta-cat">เว็บเบราว์เซอร์</td>
-          <td>
-            <span class="ta-app-name">Chrome, Edge, Safari, Firefox</span>
-            <span class="ta-app-ver">Desktop &amp; Mobile</span>
-          </td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
-          <td>แสดงผลฟอนต์เว็บ (<code>.woff</code> / <code>.woff2</code>) ระบบ Mark ได้แม่นยำ 100% และเปิดใช้งาน <code>liga</code> / <code>ccmp</code> เป็นค่าเริ่มต้นตามมาตรฐาน CSS</td>
-        </tr>
+                    <!-- 18. Web Browsers -->
+                    <tr>
+                        <td class="ta-cat">เว็บเบราว์เซอร์</td>
+                        <td>
+                            <span class="ta-app-name">Chrome, Edge, Safari, Firefox</span>
+                            <span class="ta-app-ver">Desktop &amp; Mobile</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+                        <td>แสดงผลฟอนต์เว็บ (<code>.woff</code> / <code>.woff2</code>) ระบบ Mark ได้แม่นยำ 100% และเปิดใช้งาน <code>liga</code> / <code>ccmp</code> เป็นค่าเริ่มต้นตามมาตรฐาน CSS</td>
+                    </tr>
 
-        <!-- 19. Game Engines -->
-        <tr>
-          <td class="ta-cat">เกมเอนจิน</td>
-          <td>
-            <span class="ta-app-name">Unity / Unreal Engine</span>
-            <span class="ta-app-ver">TextMeshPro ค่าเริ่มต้น / UI พื้นฐาน</span>
-          </td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับเริ่มต้น</span></td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับเริ่มต้น</span></td>
-          <td>ระบบ UI พื้นฐานของเกมเอนจินมักไม่อ่านตาราง <code>mark</code> / <code>mkmk</code> และ <code>liga</code> ของภาษาซับซ้อน ทำให้ซับไตเติลในเกมวรรณยุกต์ลอย (นักพัฒนาเกมต้องเขียนปลั๊กอินหรือเปิดระบบ HarfBuzz เสริม)</td>
-        </tr>
+                    <!-- 19. Game Engines -->
+                    <tr>
+                        <td class="ta-cat">เกมเอนจิน</td>
+                        <td>
+                            <span class="ta-app-name">Unity / Unreal Engine</span>
+                            <span class="ta-app-ver">TextMeshPro ค่าเริ่มต้น / UI พื้นฐาน</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับเริ่มต้น</span></td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับเริ่มต้น</span></td>
+                        <td>ระบบ UI พื้นฐานของเกมเอนจินมักไม่อ่านตาราง <code>mark</code> / <code>mkmk</code> และ <code>liga</code> ของภาษาซับซ้อน ทำให้ซับไตเติลในเกมวรรณยุกต์ลอย (นักพัฒนาเกมต้องเขียนปลั๊กอินหรือเปิดระบบ HarfBuzz เสริม)</td>
+                    </tr>
 
-        <!-- 20. Blender -->
-        <tr>
-          <td class="ta-cat">โปรแกรม 3D</td>
-          <td>
-            <span class="ta-app-name">Blender</span>
-            <span class="ta-app-ver">3D Text Object</span>
-          </td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
-          <td>
-            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> ระบบพิมพ์ข้อความ 3D พื้นฐานไม่รองรับ Complex Script และไม่อ่านตาราง OpenType Ligatures สระและวรรณยุกต์จะลอยทับกัน</div>
-            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> พิมพ์ใน Illustrator / Inkscape แล้วแปลงเป็น Outline / SVG ก่อนนำเข้า</div>
-          </td>
-        </tr>
+                    <!-- 20. Blender -->
+                    <tr>
+                        <td class="ta-cat">โปรแกรม 3D</td>
+                        <td>
+                            <span class="ta-app-name">Blender</span>
+                            <span class="ta-app-ver">3D Text Object</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+                        <td>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">อาการที่พบ:</span> ระบบพิมพ์ข้อความ 3D พื้นฐานไม่รองรับ Complex Script และไม่อ่านตาราง OpenType Ligatures สระและวรรณยุกต์จะลอยทับกัน</div>
+                            <div class="ta-detail-item"><span class="ta-detail-tag">วิธีแก้:</span> พิมพ์ใน Illustrator / Inkscape แล้วแปลงเป็น Outline / SVG ก่อนนำเข้า</div>
+                        </td>
+                    </tr>
 
-        <!-- 21. Legacy Software -->
-        <tr>
-          <td class="ta-cat">โปรแกรมรุ่นเก่า</td>
-          <td>
-            <span class="ta-app-name">Adobe CS6 หรือเก่ากว่า / Clip Studio Paint 1.x</span>
-            <span class="ta-app-ver">เวอร์ชันเก่า</span>
-          </td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-ok">รองรับ (ระบบเก่า)</span></td>
-          <td>ออกแบบมาเพื่อรองรับฟอนต์ภาษาไทยระบบ Ligature/PUA ยุคเก่า (เช่น CS6 รองรับ Standard Ligatures แต่ไม่รองรับ Thai Mark Positioning) เมื่อนำฟอนต์ระบบ Mark ไปใช้จะเกิดอาการวรรณยุกต์ลอย</td>
-        </tr>
+                    <!-- 21. Legacy Software -->
+                    <tr>
+                        <td class="ta-cat">โปรแกรมรุ่นเก่า</td>
+                        <td>
+                            <span class="ta-app-name">Adobe CS6 หรือเก่ากว่า / Clip Studio Paint 1.x</span>
+                            <span class="ta-app-ver">เวอร์ชันเก่า</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-ok">รองรับ (ระบบเก่า)</span></td>
+                        <td>ออกแบบมาเพื่อรองรับฟอนต์ภาษาไทยระบบ Ligature/PUA ยุคเก่า (เช่น CS6 รองรับ Standard Ligatures แต่ไม่รองรับ Thai Mark Positioning) เมื่อนำฟอนต์ระบบ Mark ไปใช้จะเกิดอาการวรรณยุกต์ลอย</td>
+                    </tr>
 
-        <!-- 22. Subtitle / Mobile Photo Apps -->
-        <tr>
-          <td class="ta-cat">โปรแกรมทั่วไป / ซับไตเติล</td>
-          <td>
-            <span class="ta-app-name">โปรแกรม Burn-in Subtitle / คาราโอเกะรุ่นเก่า / แอปแต่งรูปมือถือทั่วไป</span>
-          </td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
-          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
-          <td>โปรแกรมฝังซับรุ่นเก่าและแอปขนาดเล็กจำนวนมากอ่านเฉพาะรหัสอักขระเดี่ยว (Unicode) โดยไม่ประมวลผลตาราง <code>mark</code> หรือกฎการแทนที่รูปอักษร ทำให้สระและวรรณยุกต์ผิดตำแหน่ง</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+                    <!-- 22. Subtitle / Mobile Photo Apps -->
+                    <tr>
+                        <td class="ta-cat">โปรแกรมทั่วไป / ซับไตเติล</td>
+                        <td>
+                            <span class="ta-app-name">โปรแกรม Burn-in Subtitle / คาราโอเกะรุ่นเก่า / แอปแต่งรูปมือถือทั่วไป</span>
+                        </td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+                        <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+                        <td>โปรแกรมฝังซับรุ่นเก่าและแอปขนาดเล็กจำนวนมากอ่านเฉพาะรหัสอักขระเดี่ยว (Unicode) โดยไม่ประมวลผลตาราง <code>mark</code> หรือกฎการแทนที่รูปอักษร ทำให้สระและวรรณยุกต์ผิดตำแหน่ง</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-  <!-- กรอบคำแนะนำเพิ่มเติมและเหตุผลทางเทคนิครวมด้านล่างสุด -->
-  <div class="ta-tip-box">
-    <div class="ta-tip-block">
-      <strong>คำแนะนำเพิ่มเติมสำหรับผู้ใช้งาน:</strong> หากนำไปใช้ในโปรแกรมตัดต่อวิดีโอที่ยังไม่รองรับระบบ Mark เต็มรูปแบบ (เช่น CapCut หรือ DaVinci Resolve โหมด Text+) แนะนำให้พิมพ์ข้อความจากโปรแกรมกราฟิกที่รองรับ (เช่น Illustrator, Photoshop, Figma) แล้วบันทึกเป็นไฟล์ <strong>PNG พื้นหลังโปร่งใส</strong> เพื่อความคมชัดและตำแหน่งสระที่ถูกต้อง 100%
-    </div>
-    <div class="ta-tip-block">
-      <strong>ทำไมฟอนต์ยุคใหม่จึงเน้น <code>mark</code> มากกว่า <code>ligature</code>:</strong> ฟอนต์ระบบ Ligature ต้องสร้างตัวอักษรคู่สำเร็จรูปไว้ล่วงหน้าทุกกรณี ทำให้ไฟล์ใหญ่และมีปัญหาเมื่อผู้ใช้ปรับเพิ่มระยะห่างตัวอักษร (Tracking) เพราะสระกับพยัญชนะที่ถูกเชื่อมรวมเป็นชิ้นเดียวจะยืดห่างออกจากกันไม่ได้ ในขณะที่ฟอนต์ยุคใหม่ใช้ระบบ <code>mark</code> เป็นหลัก และอาจใส่กฎ <code>liga</code> / <code>ccmp</code> เสริมไว้เฉพาะจุด (เช่น ตัดเชิง <code>ญ</code> <code>ฐ</code> เมื่อเจอสระล่าง หรือแก้สระลอยใน Canva)
-    </div>
-  </div>
+        <!-- กรอบคำแนะนำเพิ่มเติมและเหตุผลทางเทคนิครวมด้านล่างสุด -->
+        <div class="ta-tip-box">
+            <div class="ta-tip-block">
+                <strong>คำแนะนำเพิ่มเติมสำหรับผู้ใช้งาน:</strong> หากนำไปใช้ในโปรแกรมตัดต่อวิดีโอที่ยังไม่รองรับระบบ Mark เต็มรูปแบบ (เช่น CapCut หรือ DaVinci Resolve โหมด Text+) แนะนำให้พิมพ์ข้อความจากโปรแกรมกราฟิกที่รองรับ (เช่น Illustrator, Photoshop, Figma) แล้วบันทึกเป็นไฟล์ <strong>PNG พื้นหลังโปร่งใส</strong> เพื่อความคมชัดและตำแหน่งสระที่ถูกต้อง 100%
+            </div>
+            <div class="ta-tip-block">
+                <strong>ทำไมฟอนต์ยุคใหม่จึงเน้น <code>mark</code> มากกว่า <code>ligature</code>:</strong> ฟอนต์ระบบ Ligature ต้องสร้างตัวอักษรคู่สำเร็จรูปไว้ล่วงหน้าทุกกรณี ทำให้ไฟล์ใหญ่และมีปัญหาเมื่อผู้ใช้ปรับเพิ่มระยะห่างตัวอักษร (Tracking) เพราะสระกับพยัญชนะที่ถูกเชื่อมรวมเป็นชิ้นเดียวจะยืดห่างออกจากกันไม่ได้ ในขณะที่ฟอนต์ยุคใหม่ใช้ระบบ <code>mark</code> เป็นหลัก และอาจใส่กฎ <code>liga</code> / <code>ccmp</code> เสริมไว้เฉพาะจุด (เช่น ตัดเชิง <code>ญ</code> <code>ฐ</code> เมื่อเจอสระล่าง หรือแก้สระลอยใน Canva)
+            </div>
+        </div>
 
-</section>
+    </section>
 
     <footer>
         &copy; 2026 TA Font. All rights reserved.
