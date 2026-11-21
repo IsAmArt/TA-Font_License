@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลเพิ่มเติมและบทความ - TA Font</title>
+    
+    <!-- นำเข้าฟอนต์ Sarabun ให้เหมือนหน้าหลัก -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* สไตล์โครงสร้างหลักของเว็บ TA Font */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            color: #ccc;
+        }
+        .page-header {
+            max-width: 1000px;
+            margin: 40px auto 10px auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        .page-header h1 {
+            margin-bottom: 8px;
+            color: #111;
+        }
+        .page-header p {
+            color: #666;
+            margin-top: 0;
+        }
+        .article-heading {
+            max-width: 1000px;
+            margin: 2rem auto 1rem auto;
+            padding: 0 1rem;
+            font-size: 1.5rem;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        footer {
+            background-color: #111;
+            color: #777;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+
+        /* =========================================================
+           CSS จากไฟล์ที่ 1 (gemini-code-1795194709091.html)
+           ========================================================= */
+        .ta-compat-section {
+            max-width: 1000px;
+            margin: 1.5rem auto 2.5rem auto;
+            padding: 0 1rem;
+            font-family: 'IBM Plex Sans Thai', 'Sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #1e293b;
+            line-height: 1.65;
+        }
+
+        .ta-compat-section * {
+            box-sizing: border-box;
+        }
+
+        /* กล่องอธิบายระบบ Mark */
+        .ta-info-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #2563eb;
+            border-radius: 0 8px 8px 0;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        }
+
+        .ta-info-box h2 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .ta-info-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        /* หัวข้อตาราง */
+        .ta-table-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ตัวครอบตารางสำหรับมือถือ */
+        .ta-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            background: #ffffff;
+        }
+
+        .ta-compat-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.92rem;
+            min-width: 680px;
+        }
+
+        .ta-compat-table thead {
+            background-color: #f1f5f9;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .ta-compat-table th {
+            padding: 0.9rem 1rem;
+            font-weight: 600;
+            color: #334155;
+            white-space: nowrap;
+        }
+
+        .ta-compat-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        .ta-compat-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ta-compat-table tbody tr:hover {
+            background-color: #f8fafc;
+        }
+
+        /* คอลัมน์หมวดหมู่ */
+        .ta-cat {
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* คอลัมน์ชื่อโปรแกรม */
+        .ta-app-name {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        /* ป้ายสถานะ (Badges) */
+        .ta-badge {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            white-space: nowrap;
+        }
+
+        .ta-badge-full {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .ta-badge-ok {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .ta-badge-partial {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .ta-badge-no {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        /* โค้ดอินไลน์ในตาราง */
+        .ta-compat-table code {
+            background-color: #f1f5f9;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.85em;
+            color: #0f172a;
+        }
+
+        /* กล่องคำแนะนำท้ายหน้า */
+        .ta-tip-box {
+            background-color: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 8px;
+            padding: 1.15rem 1.5rem;
+            font-size: 0.92rem;
+            color: #78350f;
+        }
+
+        .ta-tip-box strong {
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูด้านบน -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="info.html">ข้อมูลเพิ่มเติม</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- หัวข้อหลักของหน้าข้อมูลเพิ่มเติม -->
+    <div class="page-header">
+        <h1>ข้อมูลเพิ่มเติมและบทความเกี่ยวกับฟอนต์</h1>
+        <p>คู่มือการใช้งาน เทคนิคการตั้งค่า และความรู้พื้นฐานเกี่ยวกับฟอนต์ภาษาไทยจาก TA Font</p>
+    </div>
+
+    <!-- ชื่อบทความที่ 1 -->
+    <h2 class="article-heading">บทความ: การรองรับระบบ Mark ในโปรแกรมยอดนิยมปัจจุบัน</h2>
+
+    <!-- =========================================================
+         เนื้อหา HTML จากไฟล์ที่ 2 (gemini-code-1795194719061.html)
+         ========================================================= -->
+    <section class="ta-compat-section" id="font-compatibility">
+      
+      <!-- คำอธิบายระบบ Mark -->
+      <div class="ta-info-box">
+        <h2>ระบบ Mark (OpenType <code>mark</code> / <code>mkmk</code>) คืออะไร?</h2>
+        <p>
+          ฟอนต์ภาษาไทยยุคใหม่ใช้เทคโนโลยี <strong>Mark Positioning (จุดยึด Anchor)</strong> แทนการสร้างตัวอักษรสำเร็จรูป (Ligature/PUA) แบบยุคเก่า ข้อดีคือ <strong>สระและวรรณยุกต์จะจัดตำแหน่งอัตโนมัติอย่างแม่นยำ</strong> และสามารถปรับระยะห่างระหว่างตัวอักษร (Tracking / Letter Spacing) ได้โดยที่สระไม่หลุดตำแหน่ง อย่างไรก็ตาม โปรแกรมที่นำไปใช้งานต้องรองรับการประมวลผลภาษาซับซ้อน (Complex Script Shaping) ด้วย
+        </p>
+      </div>
+
+      <!-- ตารางที่ 1: โปรแกรมที่รองรับ -->
+      <h3 class="ta-table-title">1. โปรแกรมที่รองรับระบบ Mark ของฟอนต์ภาษาไทย</h3>
+      <div class="ta-table-wrapper">
+        <table class="ta-compat-table">
+          <thead>
+            <tr>
+              <th style="width: 18%;">หมวดหมู่</th>
+              <th style="width: 30%;">ชื่อโปรแกรม</th>
+              <th style="width: 15%;">สถานะ</th>
+              <th style="width: 37%;">เงื่อนไข / การตั้งค่าเพิ่มเติม</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+              <td><span class="ta-app-name">Adobe Photoshop, Illustrator, InDesign</span> (CC ขึ้นไป)</td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>ต้องเปิดใช้งาน <strong>World-Ready Layout</strong> (ในแผง Paragraph) หรือ <strong>World-Ready Composer</strong> ใน InDesign</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+              <td><span class="ta-app-name">Figma</span> (Web &amp; Desktop)</td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>รองรับอัตโนมัติทันที (ใช้เอนจิน HarfBuzz)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+              <td><span class="ta-app-name">Affinity Designer, Photo, Publisher</span> (v2 ขึ้นไป)</td>
+              <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+              <td>ควรตั้งค่า Typography Script / Language ในแผง Character เป็น <strong>Thai</strong> เพื่อให้สระซ้อนทำงานครบ</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+              <td><span class="ta-app-name">CorelDRAW</span> (เวอร์ชันใหม่)</td>
+              <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+              <td>รองรับ OpenType Complex Script อัตโนมัติ</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+              <td><span class="ta-app-name">Microsoft Word, PowerPoint, Excel</span> (2016 / 2019 / 2021 / 365)</td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>รองรับอัตโนมัติ (Word รุ่นใหม่บังคับใช้ฟอนต์ระบบ Mark เป็นหลักและตัดการรองรับระบบ Ligature เก่าออกแล้ว)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+              <td><span class="ta-app-name">Apple Pages, Keynote, Numbers</span> (macOS / iPadOS / iOS)</td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>รองรับอัตโนมัติผ่านระบบ Core Text ของ Apple</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+              <td><span class="ta-app-name">Google Docs, Slides, Sheets</span></td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>รองรับอัตโนมัติผ่านเอนจินของเว็บเบราว์เซอร์</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+              <td><span class="ta-app-name">LibreOffice Writer, Impress</span></td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>รองรับอัตโนมัติผ่านเอนจิน HarfBuzz</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+              <td><span class="ta-app-name">Procreate</span> (iPadOS เวอร์ชันปัจจุบัน)</td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>รองรับผ่านระบบ Core Text ของ iPadOS</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+              <td><span class="ta-app-name">Clip Studio Paint</span> (เวอร์ชัน 2.0 ขึ้นไป)</td>
+              <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+              <td>รองรับการจัดตำแหน่ง Mark ภาษาไทยแล้ว (ต่างจากเวอร์ชัน 1.x เก่าที่วรรณยุกต์ลอย)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+              <td><span class="ta-app-name">ibisPaint X</span> (iOS / Android)</td>
+              <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+              <td>รองรับผ่านระบบเรนเดอร์ข้อความของระบบปฏิบัติการ</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+              <td><span class="ta-app-name">Adobe Premiere Pro, After Effects</span> (CC 2020 ขึ้นไป)</td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>ต้องตั้งค่า Text Engine ในเมนู Preferences เป็น <strong>South Asian and Middle Eastern</strong></td>
+            </tr>
+            <tr>
+              <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+              <td><span class="ta-app-name">Final Cut Pro, Apple Motion</span></td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>รองรับอัตโนมัติผ่านระบบ Core Text</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">ตัดต่อวิดีโอ / โมชัน</td>
+              <td><span class="ta-app-name">DaVinci Resolve</span> (เฉพาะเครื่องมือ <strong>Text</strong> ปกติ)</td>
+              <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+              <td>ใช้งานได้ในเครื่องมือ <strong>Text</strong> ทั่วไปบนหน้า Edit (แต่มีปัญหาในโหมด Text+)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">เว็บเบราว์เซอร์</td>
+              <td><span class="ta-app-name">Chrome, Edge, Safari, Firefox</span></td>
+              <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+              <td>แสดงผลฟอนต์เว็บ (.woff / .woff2) ระบบ Mark ได้แม่นยำ 100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ตารางที่ 2: โปรแกรมที่ยังไม่รองรับ -->
+      <h3 class="ta-table-title">2. โปรแกรมที่ยังไม่รองรับ หรือรองรับไม่สมบูรณ์</h3>
+      <div class="ta-table-wrapper">
+        <table class="ta-compat-table">
+          <thead>
+            <tr>
+              <th style="width: 18%;">หมวดหมู่</th>
+              <th style="width: 30%;">ชื่อโปรแกรม</th>
+              <th style="width: 15%;">สถานะ</th>
+              <th style="width: 37%;">อาการที่พบ / วิธีแก้ไขเบื้องต้น</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ta-cat">ตัดต่อวิดีโอ</td>
+              <td><span class="ta-app-name">CapCut</span> (Mobile &amp; Desktop)</td>
+              <td><span class="ta-badge ta-badge-partial">รองรับไม่สมบูรณ์</span></td>
+              <td>มักเกิดอาการ <strong>วรรณยุกต์ลอยหรือสระซ้อน</strong> เมื่อใส่แอนิเมชันข้อความ หรือปรับระยะห่างตัวอักษร (<strong>วิธีแก้:</strong> ตั้งค่า Character Spacing เป็น <code>0</code> เท่านั้น หรือทำข้อความเป็นไฟล์ PNG โปร่งใสมาวางแทน)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">กราฟิกออนไลน์</td>
+              <td><span class="ta-app-name">Canva</span> (Web &amp; App)</td>
+              <td><span class="ta-badge ta-badge-partial">รองรับบางส่วน</span></td>
+              <td>ฟอนต์ที่อัปโหลดเองบางตัวเกิดอาการสระลอย/สระจม (<strong>วิธีแก้:</strong> กดเลือกกล่องข้อความ ไปที่ <code>Advanced settings</code> แล้วเปิดใช้งาน <strong>Ligatures</strong>)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">ตัดต่อวิดีโอ</td>
+              <td><span class="ta-app-name">DaVinci Resolve</span> (เฉพาะโหมด <strong>Text+ / Fusion</strong>)</td>
+              <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+              <td>เอนจินเรนเดอร์ของ Text+ ไม่รองรับการวางตำแหน่ง Mark ภาษาไทย ทำให้ <strong>สระจมหรือวรรณยุกต์ลอย</strong> (แนะนำให้สร้างข้อความเป็นไฟล์ PNG โปร่งใสจากโปรแกรมกราฟิกแทน)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">เกมเอนจิน</td>
+              <td><span class="ta-app-name">Unity</span> (TextMeshPro ค่าเริ่มต้น) / <span class="ta-app-name">Unreal Engine</span></td>
+              <td><span class="ta-badge ta-badge-no">ไม่รองรับเริ่มต้น</span></td>
+              <td>ระบบ UI พื้นฐานของเกมเอนจินมักไม่อ่านตาราง <code>mark</code> / <code>mkmk</code> ของภาษาไทย ทำให้ซับไตเติลในเกมวรรณยุกต์ลอย (นักพัฒนาเกมต้องเขียนปลั๊กอินหรือเปิดระบบ HarfBuzz เสริม)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">โปรแกรม 3D</td>
+              <td><span class="ta-app-name">Blender</span> (3D Text Object)</td>
+              <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+              <td>ระบบพิมพ์ข้อความ 3D ไม่รองรับ Complex Script ภาษาไทย สระและวรรณยุกต์จะลอยทับกัน (<strong>วิธีแก้:</strong> พิมพ์ใน Illustrator/Inkscape แล้วแปลงเป็น Outline/SVG ก่อนนำเข้า)</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">โปรแกรมรุ่นเก่า</td>
+              <td><span class="ta-app-name">Adobe CS6 หรือเก่ากว่า / Clip Studio Paint 1.x</span></td>
+              <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+              <td>ออกแบบมาเพื่อรองรับฟอนต์ภาษาไทยระบบ Ligature/PUA ยุคเก่า เมื่อนำฟอนต์ระบบ Mark ไปใช้จะเกิดอาการวรรณยุกต์ลอย</td>
+            </tr>
+            <tr>
+              <td class="ta-cat">โปรแกรมฝังซับไตเติล</td>
+              <td><span class="ta-app-name">โปรแกรม Burn-in Subtitle / คาราโอเกะรุ่นเก่า</span></td>
+              <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+              <td>โปรแกรมฝังซับรุ่นเก่าจำนวนมากใช้ตัวเรนเดอร์ข้อความพื้นฐาน ทำให้สระและวรรณยุกต์ผิดตำแหน่ง</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- คำแนะนำเพิ่มเติม -->
+      <div class="ta-tip-box">
+        <strong>คำแนะนำเพิ่มเติมสำหรับผู้ใช้งาน:</strong> หากนำไปใช้ในโปรแกรมตัดต่อวิดีโอที่ยังไม่รองรับระบบ Mark เต็มรูปแบบ (เช่น CapCut หรือ DaVinci Resolve โหมด Text+) แนะนำให้พิมพ์ข้อความจากโปรแกรมกราฟิกที่รองรับ (เช่น Illustrator, Photoshop, Figma) แล้วบันทึกเป็นไฟล์ <strong>PNG พื้นหลังโปร่งใส</strong> เพื่อความคมชัดและตำแหน่งสระที่ถูกต้อง 100%
+      </div>
+
+    </section>
+
+    <footer>
+        &copy; 2026 TA Font. All rights reserved.
+    </footer>
+
+</body>
+</html>
