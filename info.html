@@ -238,6 +238,14 @@
         .ta-tip-box strong {
             color: #92400e;
         }
+        /* เส้นคั่นระหว่างหัวข้อ Mark และ Ligature */
+  .ta-divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 3.5rem auto;
+    max-width: 1000px;
+  }
     </style>
 </head>
 <body>
@@ -445,6 +453,154 @@
       </div>
 
     </section>
+    <hr class="ta-divider">
+
+<section class="ta-compat-section" id="ligature-compatibility">
+  
+  <!-- คำอธิบายระบบ Ligature -->
+  <div class="ta-info-box">
+    <h2>ระบบ Ligature (OpenType <code>liga</code> / <code>rlig</code> / <code>ccmp</code> และ PUA) คืออะไร?</h2>
+    <p>
+      <strong>ระบบ Ligature</strong> คือเทคนิคการสร้างตัวอักษรสำเร็จรูปเพื่อแทนที่ชุดตัวอักษรที่พิมพ์ติดกัน (เช่น การจับคู่ <code>ญ</code> + <code>ุ</code> ให้กลายเป็น <code>ญ</code> ไม่มีเชิง หรือการรวมพยัญชนะ+สระ+วรรณยุกต์เป็นตัวเดียวเพื่อแก้ปัญหาสระลอยในโปรแกรมที่ไม่รองรับ <code>mark</code>) ซึ่งโปรแกรมส่วนใหญ่รองรับ <code>liga</code> ได้กว้างกว่า <code>mark</code> ยกเว้น <strong>Microsoft Word รุ่นใหม่</strong> ที่ตัดการรองรับฟอนต์ไทยระบบ Ligature/PUA ยุคเก่าออกไปแล้ว
+    </p>
+  </div>
+
+  <!-- ตารางที่ 1: โปรแกรมที่รองรับ -->
+  <h3 class="ta-table-title">1. โปรแกรมที่รองรับระบบ Ligature</h3>
+  <div class="ta-table-wrapper">
+    <table class="ta-compat-table">
+      <thead>
+        <tr>
+          <th style="width: 18%;">หมวดหมู่</th>
+          <th style="width: 30%;">ชื่อโปรแกรม</th>
+          <th style="width: 15%;">สถานะ</th>
+          <th style="width: 37%;">เงื่อนไข / การตั้งค่าเพิ่มเติม</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+          <td><span class="ta-app-name">Adobe Photoshop, Illustrator, InDesign</span> (CS5 / CS6 / CC ขึ้นไป)</td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>เปิดใช้งาน <strong>Standard Ligatures</strong> ในแผง Character เป็นค่าเริ่มต้น (ทำงานได้ทันทีโดยไม่ต้องเปิด World-Ready Layout)</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+          <td><span class="ta-app-name">Figma</span> (Web &amp; Desktop)</td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>เปิดใช้งาน <code>Ligatures</code> อัตโนมัติ และตั้งค่าเพิ่มได้ที่เมนู <code>Type Details</code></td>
+        </tr>
+        <tr>
+          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+          <td><span class="ta-app-name">Affinity Designer, Photo, Publisher</span></td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>เปิดใช้งาน <code>Standard Ligatures</code> ในแผง Typography เป็นค่าเริ่มต้น</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">กราฟิกและสิ่งพิมพ์</td>
+          <td><span class="ta-app-name">CorelDRAW</span></td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>เปิดใช้งานได้ในหน้าต่าง OpenType Features</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">กราฟิกออนไลน์</td>
+          <td><span class="ta-app-name">Canva</span> (Web &amp; App)</td>
+          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+          <td>ต้องกดเลือกกล่องข้อความ ไปที่ <code>Advanced settings</code> &gt; แท็บ <code>Advanced</code> แล้วเปิดสวิตช์ <strong>Ligatures</strong></td>
+        </tr>
+        <tr>
+          <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+          <td><span class="ta-app-name">Apple Pages, Keynote, Numbers</span> (macOS / iPadOS / iOS)</td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>รองรับอัตโนมัติผ่านเอนจิน Core Text ของ Apple</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+          <td><span class="ta-app-name">LibreOffice Writer, Impress</span></td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>รองรับอัตโนมัติผ่านเอนจิน HarfBuzz</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">งานเอกสาร / ออฟฟิศ</td>
+          <td><span class="ta-app-name">Microsoft Word, PowerPoint</span> (2016 / 2019 / 2021 / 365)</td>
+          <td><span class="ta-badge ta-badge-partial">รองรับบางส่วน</span></td>
+          <td>รองรับเฉพาะ OpenType <code>liga</code> มาตรฐานเมื่อเข้าไปเปิดที่ <code>Font &gt; Advanced &gt; Ligatures</code> <strong>แต่ไม่รองรับฟอนต์ไทยระบบ Ligature/PUA รุ่นเก่า</strong> (เช่น ตระกูล PSL / JS / DSN ยุคเก่า จะเกิดอาการสระลอยหรือเพี้ยน)</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+          <td><span class="ta-app-name">Procreate</span> (iPadOS)</td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>รองรับอัตโนมัติผ่านระบบ Core Text ของ iPadOS</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">วาดภาพ / แท็บเล็ต</td>
+          <td><span class="ta-app-name">Clip Studio Paint</span> (เวอร์ชัน 2.0 ขึ้นไป)</td>
+          <td><span class="ta-badge ta-badge-ok">รองรับ</span></td>
+          <td>รองรับ <code>Ligatures</code> ตั้งแต่ v2.0 และ <code>Contextual Alternates</code> ใน v3.0 (ตั้งค่าใน <code>Sub Tool Detail &gt; Font &gt; OpenType</code>)</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">เว็บเบราว์เซอร์</td>
+          <td><span class="ta-app-name">Chrome, Edge, Safari, Firefox</span></td>
+          <td><span class="ta-badge ta-badge-full">รองรับสมบูรณ์</span></td>
+          <td>เปิดใช้งาน <code>liga</code> และ <code>ccmp</code> เป็นค่าเริ่มต้นตามมาตรฐาน CSS</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ตารางที่ 2: โปรแกรมที่ยังไม่รองรับ -->
+  <h3 class="ta-table-title">2. โปรแกรมที่ยังไม่รองรับ หรือรองรับไม่สมบูรณ์</h3>
+  <div class="ta-table-wrapper">
+    <table class="ta-compat-table">
+      <thead>
+        <tr>
+          <th style="width: 18%;">หมวดหมู่</th>
+          <th style="width: 30%;">ชื่อโปรแกรม</th>
+          <th style="width: 15%;">สถานะ</th>
+          <th style="width: 37%;">อาการที่พบ / ข้อจำกัดทางเทคนิค</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ta-cat">ตัดต่อวิดีโอ</td>
+          <td><span class="ta-app-name">CapCut</span> (Mobile &amp; Desktop)</td>
+          <td><span class="ta-badge ta-badge-partial">ไม่รองรับ / ไม่เสถียร</span></td>
+          <td>เอนจินเรนเดอร์ข้อความของ CapCut มักไม่อ่านตาราง GSUB (<code>liga</code>) และ Kerning ของฟอนต์ที่นำเข้าเอง ทำให้ตัวอักษรไม่เปลี่ยนรูปหรือสระลอย</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">ตัดต่อวิดีโอ</td>
+          <td><span class="ta-app-name">DaVinci Resolve</span> (โหมด <strong>Text+ / Fusion</strong>)</td>
+          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+          <td>เอนจิน Text+ ไม่อ่านตาราง OpenType Ligatures (ส่วนเครื่องมือ <strong>Text</strong> ปกติบนหน้า Edit จะอ่านได้ตามระบบปฏิบัติการ)</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">โปรแกรม 3D</td>
+          <td><span class="ta-app-name">Blender</span> (3D Text Object)</td>
+          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+          <td>ระบบพิมพ์ข้อความ 3D พื้นฐานไม่อ่านตาราง OpenType Ligatures (ต้องพิมพ์จากโปรแกรมกราฟิกแล้วแปลงเป็น SVG ก่อนนำเข้า)</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">เกมเอนจิน</td>
+          <td><span class="ta-app-name">Unity</span> (TextMeshPro ค่าเริ่มต้น) / <span class="ta-app-name">Unreal Engine</span></td>
+          <td><span class="ta-badge ta-badge-no">ไม่รองรับเริ่มต้น</span></td>
+          <td>ระบบแสดงผล UI พื้นฐานไม่อ่านตาราง <code>liga</code> ของภาษาซับซ้อน ต้องเปิดใช้ปลั๊กอิน HarfBuzz เสริม</td>
+        </tr>
+        <tr>
+          <td class="ta-cat">โปรแกรมทั่วไป</td>
+          <td><span class="ta-app-name">โปรแกรมฝังซับไตเติล / แอปแต่งรูปมือถือทั่วไป</span></td>
+          <td><span class="ta-badge ta-badge-no">ไม่รองรับ</span></td>
+          <td>แอปขนาดเล็กจำนวนมากอ่านเฉพาะรหัสอักขระเดี่ยว (Unicode) โดยไม่ประมวลผลกฎการแทนที่รูปอักษร</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- คำแนะนำเพิ่มเติม -->
+  <div class="ta-tip-box">
+    <strong>ทำไมฟอนต์ยุคใหม่จึงเน้น <code>mark</code> มากกว่า <code>ligature</code>:</strong> ฟอนต์ระบบ Ligature ต้องสร้างตัวอักษรคู่สำเร็จรูปไว้ล่วงหน้าทุกกรณี ทำให้ไฟล์ใหญ่และมีปัญหาเมื่อผู้ใช้ปรับเพิ่มระยะห่างตัวอักษร (Tracking) เพราะสระกับพยัญชนะที่ถูกเชื่อมรวมเป็นชิ้นเดียวจะยืดห่างออกจากกันไม่ได้ ในขณะที่ฟอนต์ยุคใหม่ใช้ระบบ <code>mark</code> เป็นหลัก และอาจใส่กฎ <code>liga</code> / <code>ccmp</code> เสริมไว้เฉพาะจุด (เช่น ตัดเชิง <code>ญ</code> <code>ฐ</code> เมื่อเจอสระล่าง หรือแก้สระลอยใน Canva)
+  </div>
+
+</section>
 
     <footer>
         &copy; 2026 TA Font. All rights reserved.
